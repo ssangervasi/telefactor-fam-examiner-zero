@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+cat <<-ABOUT
+	This is a handy dandy script for generating a look at the status of
+	the current commit. It requires CLOC, "Count Lines of Code", but will
+	run without out it.
+ABOUT
+
+STATS_PATH="${STATS_PATH:-./STATS.md}"
+if [[ -f "$STATS_PATH" ]]; then
+	rm "$STATS_PATH"
+fi
+
+(
+	echo '# Git Log'
+	echo
+	echo '```'
+	git log -n1
+	echo '```'
+	echo
+
+	echo '# CLOC'
+	echo
+	cloc -md .
+	echo
+
+	echo '# Spec Results'
+	echo
+	echo '```'
+	bundle exec rspec
+	echo '```'
+	echo
+) | tee "$STATS_PATH"

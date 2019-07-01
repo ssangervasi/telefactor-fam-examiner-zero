@@ -4,9 +4,9 @@ Wattup, fam?! Welcome to `fam`, fam. Fam is:
 
 > The **only** CLI for building family trees.™
 >
-> Created by the child of Real-Life Parents™: `insert sourcer name here`
+> Created by the child of Real-Life Parents™: ssangervasi
 >
-> Certified "Not Broken"™ by: `insert examiner name here`
+> Certified "Not Broken"™ by: hammerdr
 
 
 
@@ -132,3 +132,11 @@ Want to automatically conform to the project style? Run this:
 ```sh
 bundle exec rubocop --auto-correct
 ```
+
+## Golden rule
+
+Don't forget:
+
+> Have fun, be courteous of others.
+
+All other rules can be bent in service of this rule.
